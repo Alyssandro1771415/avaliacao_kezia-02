@@ -10,8 +10,12 @@ contador = 0
 while resposta == "S":
     resposta = input("Deseja inserar uma idade[S/N]: ").upper()
 
+    while resposta not in "SN":
+        resposta = input("Deseja inserar uma idade[S/N]: ").upper()
+
     if resposta == "S":
         idade = input("Idade: ")
+        idade = int(idade)
         soma += idade
         contador += 1
     elif resposta == "N":
@@ -22,5 +26,6 @@ while resposta == "S":
             conceito = "Adulto"
         else:
             conceito = "Idosa"
-        print(f"A média de idade dos usuários é {}")
+        print(f"A média de idade dos usuários é: {media:.3f} anos")
+        print(f"A turma em geral se classifica como: {conceito}")
 
