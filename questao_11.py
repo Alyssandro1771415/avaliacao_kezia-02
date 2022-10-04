@@ -30,7 +30,6 @@ for i in range(0, 15):
         soma_idade_otimo += idade
     if opiniao == 1:
         avaliacao_regular += 1
-
     if opiniao == 2:
         soma_bom += 1
 

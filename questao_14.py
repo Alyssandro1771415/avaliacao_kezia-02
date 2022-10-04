@@ -8,6 +8,7 @@ soma = 0
 contador = 0
 
 while resposta == "S":
+    
     resposta = input("Deseja inserar uma idade[S/N]: ").upper()
 
     while resposta not in "SN":

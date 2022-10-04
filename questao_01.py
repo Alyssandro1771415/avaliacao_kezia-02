@@ -7,12 +7,14 @@ for i in range(0, 30):
     nota_1 = input("Nota 1: ")
     while nota_1.isalpha() or float(nota_1) > 10 or float(nota_1) < 0:
         nota_1 = input("\033[31m Valor acima ou abaixo do permitido, digite um valor entre 0 e 10: \033[m")
+    nota_1 = float(nota_1)
 
     nota_2 = input("Nota 2: ")
     while nota_2.isalpha() or float(nota_2) > 10 or float(nota_2) < 0:
         nota_2 = input("\033[31mValor acima ou abaixo do permitido, digite um valor entre 0 e 10: \033[m")
+    nota_2 = float(nota_2)
 
-    media = (float(nota_1) + float(nota_2)) / 2
+    media = (nota_1 + nota_2) / 2
 
     if media >= 7:
         situacao = "Aprovado"
