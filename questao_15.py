@@ -12,7 +12,7 @@ while quant_termos.isalpha() or int(quant_termos) < 3:
 quant_termos = int(quant_termos)
 
 n1 = n2 = 0
-serie = int()
+serie = 0
 
 n1 = input("Primeiro termo: ")
 while n1.isalpha():
@@ -24,9 +24,6 @@ while n2.isalpha():
     n2 = int(input("Inválido, digite o segundo termo: "))
 n2 = int(n2)
 
-print(n1)
-print(n2)
-
 for i in range (3, quant_termos+1):
     if i % 2 == 0:
         serie = n2 + n1
@@ -36,4 +33,4 @@ for i in range (3, quant_termos+1):
     n1 = n2
     n2 = serie
 
-    print(serie, end=', ')
+    print(serie)

@@ -5,7 +5,7 @@ valor = 1000
 soma = 0
 
 for i in range(1, 51):
-    soma += valor/i
-    valor -= 3
+    soma = soma + valor/i
+    valor = valor - 3
 
 print(soma)

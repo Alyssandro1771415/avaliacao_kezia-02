@@ -5,6 +5,8 @@ trabalho deste empregado e imprimir o mais recente e o mais antigo. Obs.: A
 última informação contém os dois números iguais a zero. Não existem dois 
 empregados admitidos no mesmo mês"""
 
+
+
 contador = 0
 resposta = "S"
 maisAntigo = maisNovo = 0
@@ -17,12 +19,14 @@ while resposta == "S":
     while resposta not in "SN":
         resposta = input("Deseja adicionar um empregado[S/N]: ").upper()
     
-    contador += 1
+    contador = contador + 1
 
     if resposta == "S":
         numero_empregado = input("Número do empregado: ")
+        while numero_empregado.isalpha() or float(numero_empregado) < 0:
+            numero_empregado = input("Número do empregado: ")
+            
         numero_meses = input("Número de meses na empresa: ")
-
         while numero_meses in meses:
             numero_meses = input("Inválido, nesse mês já houve contratação, tente novamente: ")
 

@@ -25,8 +25,8 @@ while resposta == "S":
             temperatura = input("Inválido, temperatura °C: ")
         temperatura = float(temperatura)
 
-        soma_total += temperatura
-        contador += 1
+        soma_total = soma_total + temperatura
+        contador = contador + 1
 
         if contador == 1:
             maior_temperatura = menor_temperatura = temperatura

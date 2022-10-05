@@ -15,7 +15,7 @@ R$ 1.150,00 15 6 R$ 191,67"""
 valor_divida = input("Valor da dívida: ")
 
 while valor_divida.isalpha() or float(valor_divida) < 0:
-    valor_divida = input("Valor da dívida: ")
+    valor_divida = input("Inválido, valor da dívida: ")
 
 valor_divida = float(valor_divida)
 

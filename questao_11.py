@@ -7,33 +7,31 @@ b) A quantidade de pessoas que responderam regular;
 c) A porcentagem de pessoas que responderam bom entre todos os
 espectadores analisados."""
 
-total_pessoas = 0
+
 soma_idade_otimo = 0
 avaliacao_regular = 0
 soma_bom = 0
 
 for i in range(0, 15):
     idade = input("Idade: ")
-    while idade.isalpha():
+    while idade.isalpha() or int(idade) < 0:
         idade = input("Inválido, digite sua idade: ")
     idade = int(idade)
-    print(idade)
 
     opiniao = input("Conceito(3-ótimo, 2-bom, 1-regular): ")
     while opiniao.isalpha() or int(opiniao) > 3 or int(opiniao) < 1:
         opiniao = input("Conceito(3-ótimo, 2-bom, 1-regular): ")
     opiniao = int(opiniao)
 
-    total_pessoas += 1
 
     if opiniao == 3:
-        soma_idade_otimo += idade
+        soma_idade_otimo = soma_idade_otimo + idade
     if opiniao == 1:
-        avaliacao_regular += 1
+        avaliacao_regular = avaliacao_regular + 1
     if opiniao == 2:
-        soma_bom += 1
+        soma_bom = soma_bom + 1
 
 
 print(f"Média de idade das pessoas que opinaram o filme como ótimo: {soma_idade_otimo/15}")
-print(f"Total de valiações regular: {avaliacao_regular}/{total_pessoas}")
-print(f"Porcentagem de avaliações boas: {soma_bom*100/total_pessoas}%")
+print(f"Total de avaliações regulares: {avaliacao_regular}")
+print(f"Porcentagem de avaliações boas: {soma_bom*100/15}%")

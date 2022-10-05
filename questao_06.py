@@ -2,23 +2,23 @@
 valores A e B deverão ser lidos. Não usar A** B e sim uma estrutura de
 repetição."""
 
-x = 0
+contador = 0
 
 numero = input("Valor: ")
 while numero.isalpha():
     numero = input("Valor inválido, digite um número: ")
-numero = int(numero)
+numero = float(numero)
 
 expoente = input("Expoente: ")
 while expoente.isalpha():
     expoente = input("Valor inválido, digite um número: ")
-expoente = int(expoente)
+expoente = float(expoente)
 
 potenciacao = 1
 
-while x < abs(expoente):
-    potenciacao *= int(numero)
-    x += 1
+while contador < abs(expoente):
+    potenciacao = potenciacao * numero
+    contador = contador + 1
 
 if expoente < 0:
     potenciacao = f"1/{potenciacao}"
@@ -26,4 +26,4 @@ if expoente < 0:
 elif expoente > 0:
     print(f"Resultado: {potenciacao}")
 else:
-    print("Resultado: 0")
+    print("Resultado: 1")

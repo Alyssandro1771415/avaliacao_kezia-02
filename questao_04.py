@@ -4,5 +4,5 @@ escrever o resultado."""
 resultado = 0
 
 for i in range(0, 1000, 2):
-    resultado += i
+    resultado = resultado + i
 print(f"\033[36;40mO resultado da soma de todos os valores pares menores que 1000 é: {resultado}\033[m")

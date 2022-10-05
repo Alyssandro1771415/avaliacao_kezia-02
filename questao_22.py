@@ -25,6 +25,6 @@ while time_1 >= 0 and time_2 >= 0:
     elif time_1 < time_2:
         pontos += 0
     else:
-        pontos += 2
+        pontos += 3
 
 print(f"Pontuação: {pontos}")

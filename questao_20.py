@@ -17,7 +17,7 @@ while numero != 0:
 
     numero = int(numero)
 
-    somaTotal += numero
+    somaTotal = somaTotal + numero
 
     if numero % 2 == 0:
         quantidadePares += 1

@@ -11,20 +11,21 @@ print("Bauru simples", "101", "R$1,30", sep='\t\t')
 print("Bauru com ovo", "102", "R$1,50", sep='\t\t')
 print("Hambúrguer", "103", "R$1,20", sep='\t\t')
 print("Cheesebúrguer", "104", "R$1,30", sep='\t\t')
-print("Refrigerante", "105", "R$1,00", sep='\t\t\033[m')
+print("Refrigerante", "105", "R$1,00\033[m", sep='\t\t')
 
 total = 0
 quantidade = 1
+resposta = "S"
 
-while quantidade > 0:
+while resposta == "S":
 
     produto = input("Digite o código do produto: ")
     while produto.isalpha() or int(produto) > 105 or int(produto) < 100:
-        produto = input("Digite o código do produto: ")
+        produto = input("Código inválido, digite o código do produto: ")
     produto = int(produto)
 
     quantidade = input("Quantidade: ")
-    while quantidade.isalpha() or 105 < int(quantidade) < 100:
+    while quantidade.isalpha():
         quantidade = input("Digite o código do produto: ")
     quantidade = int(quantidade)
 
@@ -46,5 +47,9 @@ while quantidade > 0:
     elif produto == 105:
         print(f"Valor: R${1.00 * quantidade}")
         total = total + 1.00 * quantidade
+
+    resposta = input("Deseja pedir algo mais[S/N]: ").upper()
+    while resposta not in "SN":
+        resposta = input("Deseja pedir[S/N]: ").upper()
 
 print(f"Valor total da compra: R${total}")

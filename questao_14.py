@@ -17,16 +17,16 @@ while resposta == "S":
     if resposta == "S":
         idade = input("Idade: ")
         idade = int(idade)
-        soma += idade
-        contador += 1
+        soma = soma + idade
+        contador = contador + 1
     elif resposta == "N":
         media = soma/contador
         if media <= 25:
             conceito = "Jovem"
-        elif media > 26 and media < 60:
+        elif media >= 26 and media <= 60:
             conceito = "Adulto"
         else:
             conceito = "Idosa"
-        print(f"A média de idade dos usuários é: {media:.3f} anos")
+        print(f"A média de idade dos usuários é: {media:.2f} anos")
         print(f"A turma em geral se classifica como: {conceito}")
 
